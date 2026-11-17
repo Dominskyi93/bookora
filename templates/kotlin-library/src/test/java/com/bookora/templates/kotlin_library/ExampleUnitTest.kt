@@ -1,4 +1,4 @@
-package com.bookora.templates.android_library
+package com.bookora.templates.kotlin_library
 
   import org.junit.Test
 

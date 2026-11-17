@@ -1,4 +1,4 @@
-package com.bookora.templates.android_library
+package com.bookora.templates.kotlin_library
 
   import androidx.test.platform.app.InstrumentationRegistry
   import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ package com.bookora.templates.android_library
     fun useAppContext() {
       // Context of the app under test.
       val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-      assertEquals("com.bookora.templates.android_library.test", appContext.packageName)
+      assertEquals("com.bookora.templates.kotlin_library.test", appContext.packageName)
     }
   }

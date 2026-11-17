@@ -3,7 +3,7 @@ plugins {
 }
 
     android {
-    namespace = "com.bookora.templates.android_library"
+    namespace = "com.bookora.templates.kotlin_library"
         compileSdk {
             version = release(37)
         }
