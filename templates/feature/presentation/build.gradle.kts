@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.bookora.templates.presentation"
+    namespace = "com.bookora.templates.feature.presentation"
 }
 
 dependencies {

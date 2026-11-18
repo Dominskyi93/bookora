@@ -1,4 +1,4 @@
-package com.bookora.templates.android_library
+package com.bookora.templates.feature.presentation
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
