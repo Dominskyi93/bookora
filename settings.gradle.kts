@@ -27,3 +27,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Bookora"
 include(":app")
+include(":templates:android-library")
+include(":templates:kotlin-library")

@@ -14,6 +14,9 @@ android {
 }
 
 dependencies {
+    implementation(project(":templates:android-library"))
+    implementation(project(":templates:kotlin-library"))
+
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
