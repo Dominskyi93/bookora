@@ -16,6 +16,8 @@ android {
 }
 
 dependencies {
+    implementation(projects.core.commonAndroid)
+
     implementation(projects.templates.androidLibrary)
     implementation(projects.templates.kotlinLibrary)
     implementation(projects.templates.feature.domain)
