@@ -17,6 +17,8 @@ android {
 
 dependencies {
     implementation(projects.core.commonAndroid)
+//    implementation(projects.features.init.presentation)
+    implementation(projects.navigation)
 
     implementation(projects.templates.androidLibrary)
     implementation(projects.templates.kotlinLibrary)

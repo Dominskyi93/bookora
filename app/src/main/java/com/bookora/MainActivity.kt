@@ -3,38 +3,38 @@ package com.bookora
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.bookora.core.common.android.AndroidExceptionHandler
+import com.bookora.navigation.AppNavHost
+import com.bookora.navigation.base.impl.ComposeDialogs
 import com.bookora.ui.theme.BookoraTheme
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var exceptionHandler: AndroidExceptionHandler
+
+    @Inject
+    lateinit var dialogs: ComposeDialogs
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             BookoraTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                BookoraApp(dialogs)
+                exceptionHandler.ErrorDialog()
             }
         }
     }
 }
 
+//@PreviewScreenSizes
 @Composable
-fun Greeting(name: String, modifier: Modifier) {
-    Text(
-        text = name,
-        modifier = modifier
-    )
+fun BookoraApp(dialogs: ComposeDialogs) {
+    AppNavHost(dialogs = dialogs, modifier = Modifier.fillMaxSize())
 }

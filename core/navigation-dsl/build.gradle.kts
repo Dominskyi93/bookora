@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.bookora.templates.android_library"
+    namespace = "com.bookora.core.navigation.dsl"
 }
 
 dependencies {
