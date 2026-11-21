@@ -1,4 +1,4 @@
-package com.bookora.templates.android_library
+package com.bookora.features.profile.domain
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.bookora.templates.feature.domain
+package com.bookora.features.profile.presentation
 
 import org.junit.Test
 
