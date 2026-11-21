@@ -1,5 +1,8 @@
 plugins {
     alias(libs.plugins.custom.android.library)
+    alias(libs.plugins.custom.compose.library)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -7,6 +10,15 @@ android {
 }
 
 dependencies {
+    api(projects.features.profile.domain)
+    implementation(projects.core.essentials)
+//    implementation(projects.core.presentation)
+//    implementation(projects.core.theme)
+    implementation(projects.core.navigationDsl)
+    //hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)

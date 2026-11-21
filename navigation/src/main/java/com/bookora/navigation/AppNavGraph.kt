@@ -5,10 +5,12 @@ import androidx.compose.material.icons.automirrored.filled.LibraryBooks
 import androidx.compose.material.icons.filled.Checklist
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SupervisorAccount
+import com.bookora.features.library.presentation.libraryScreen
 import com.bookora.features.main.presentation.Tab
 import com.bookora.features.main.presentation.mainScreen
 import com.bookora.navigation.base.ExtendedNavGraphBuilder
 import com.bookora.navigation.base.composable
+import com.bookora.templates.feature.presentation.profileScreen
 
 fun ExtendedNavGraphBuilder.buildAppNavGraph() {
     composable<MainRoute> {
@@ -20,7 +22,7 @@ fun ExtendedNavGraphBuilder.buildAppNavGraph() {
                     //    getString(ChatsR.string.chats_title)
                 },
                 configuration = {
-//                    chatsScreen()
+                    libraryScreen()
                 }
             ),
             Tab(
@@ -51,7 +53,7 @@ fun ExtendedNavGraphBuilder.buildAppNavGraph() {
                     //    getString(ChatsR.string.chats_title)
                 },
                 configuration = {
-//                    chatsScreen()
+                    profileScreen()
                 }
             )
         )

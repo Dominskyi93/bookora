@@ -12,6 +12,8 @@ android {
 
 dependencies {
     implementation(projects.features.main.presentation)
+    implementation(projects.features.profile.presentation)
+    implementation(projects.features.library.presentation)
 
     implementation(projects.core.navigationDsl)
     implementation(projects.core.essentials)
