@@ -1,8 +1,9 @@
 package com.bookora.navigation
 
+import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Serializable
 
-interface Route
+interface Route : NavKey
 
 @Serializable
 data object MainRoute : Route

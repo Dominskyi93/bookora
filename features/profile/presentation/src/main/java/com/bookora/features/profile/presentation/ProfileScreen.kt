@@ -1,4 +1,4 @@
-package com.bookora.templates.feature.presentation
+package com.bookora.features.profile.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

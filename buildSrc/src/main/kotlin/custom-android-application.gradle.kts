@@ -11,6 +11,7 @@ android {
     defaultConfig {
         minSdk = Const.MIN_SDK
         targetSdk = Const.TARGET_SDK
+        compileSdkMinor = Const.COMPILE_SDK_MINOR
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

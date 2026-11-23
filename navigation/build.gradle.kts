@@ -21,8 +21,9 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
     //navigation
-    implementation(libs.navigation.compose)
     implementation(libs.hilt.navigation)
+    implementation(libs.androidx.navigation3.ui)
+    implementation(libs.androidx.viewmodel.lifecycle.navigation3)
 
     implementation(libs.collections.immutable)
     implementation(libs.androidx.core.ktx)

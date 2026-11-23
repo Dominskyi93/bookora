@@ -10,7 +10,7 @@ import com.bookora.features.main.presentation.Tab
 import com.bookora.features.main.presentation.mainScreen
 import com.bookora.navigation.base.ExtendedNavGraphBuilder
 import com.bookora.navigation.base.composable
-import com.bookora.templates.feature.presentation.profileScreen
+import com.bookora.features.profile.presentation.profileScreen
 
 fun ExtendedNavGraphBuilder.buildAppNavGraph() {
     composable<MainRoute> {
