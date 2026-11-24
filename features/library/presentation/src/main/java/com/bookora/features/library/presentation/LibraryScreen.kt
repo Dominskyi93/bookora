@@ -9,19 +9,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.bookora.navigation.dsl.ScreenScope
-
+import com.bookora.navigation.dsl.ScreenToolbar
 
 fun ScreenScope.libraryScreen() {
 
-//    toolbar = ScreenToolbar.Default(
-//        title = context.getString(R.string.chats_title),
-//        action = Action(
-//            icon = Icons.Filled.AddCircle,
-//            onClick = {
-//                viewModel.showBottomSheet()
-//            }
-//        )
-//    )
+    toolbar = ScreenToolbar.Default(
+        title = "Bookora"
+    )
 
     content {
         Column(
@@ -34,5 +28,4 @@ fun ScreenScope.libraryScreen() {
             Text(text = "Library Screen")
         }
     }
-
 }

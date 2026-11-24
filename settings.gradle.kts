@@ -30,6 +30,8 @@ include(":app")
 include(":core:essentials")
 include(":core:common-android")
 include(":core:navigation-dsl")
+include(":core:data")
+
 include(":navigation")
 
 include(":features:main:domain")

@@ -10,6 +10,9 @@ android {
 }
 
 dependencies {
+    implementation(projects.core.essentials)
+    implementation(projects.core.commonAndroid)
+    implementation(projects.core.navigationDsl)
     //hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
