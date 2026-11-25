@@ -39,12 +39,12 @@ fun ScreenScope.libraryScreen() {
     toolbar = ScreenToolbar.Default()
 
     content {
-        LibraryScreen(viewModel = viewModel)
+        LibraryScreenContent(viewModel = viewModel)
     }
 }
 
 @Composable
-fun LibraryScreen(
+fun LibraryScreenContent(
     modifier: Modifier = Modifier,
     viewModel: LibraryVM
 ) {
