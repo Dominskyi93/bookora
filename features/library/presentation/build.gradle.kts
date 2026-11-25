@@ -13,8 +13,7 @@ dependencies {
     api(projects.features.library.domain)
     implementation(projects.core.essentials)
     implementation(projects.core.presentation)
-//    implementation(projects.core.presentation)
-//    implementation(projects.core.theme)
+    implementation(projects.core.theme)
     implementation(projects.core.navigationDsl)
     //hilt
     implementation(libs.hilt.android)

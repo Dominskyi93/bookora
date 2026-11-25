@@ -32,6 +32,7 @@ include(":core:common-android")
 include(":core:navigation-dsl")
 include(":core:data")
 include(":core:presentation")
+include(":core:theme")
 
 include(":navigation")
 include(":glue")

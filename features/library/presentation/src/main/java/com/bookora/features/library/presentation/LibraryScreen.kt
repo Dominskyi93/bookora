@@ -8,12 +8,10 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -29,6 +27,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil3.compose.AsyncImage
+import com.bookora.core.theme.Dimens
+import com.bookora.core.theme.Shapes
 import com.bookora.features.library.domain.entities.Book
 import com.bookora.navigation.dsl.ScreenScope
 import com.bookora.navigation.dsl.ScreenToolbar
@@ -36,9 +36,7 @@ import com.bookora.navigation.dsl.ScreenToolbar
 fun ScreenScope.libraryScreen() {
     val viewModel: LibraryVM = viewModel(LibraryVM::class)
 
-    toolbar = ScreenToolbar.Default(
-        title = "Bookora"
-    )
+    toolbar = ScreenToolbar.Default()
 
     content {
         LibraryScreen(viewModel = viewModel)
@@ -57,7 +55,7 @@ fun LibraryScreen(
         modifier = modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.background)
-            .padding(horizontal = 16.dp)
+            .padding(horizontal = Dimens.MediumPadding)
     ) {
         when {
             isLoading -> {
@@ -80,8 +78,8 @@ fun LibraryScreen(
 
             else -> {
                 LazyColumn(
-                    verticalArrangement = Arrangement.spacedBy(12.dp),
-                    contentPadding = PaddingValues(bottom = 16.dp)
+                    verticalArrangement = Arrangement.spacedBy(Dimens.SmallPadding),
+                    contentPadding = PaddingValues(bottom = Dimens.MediumPadding)
                 ) {
                     items(
                         items = books,
@@ -103,7 +101,7 @@ fun BookItem(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(12.dp),
+        shape = Shapes.SmallRoundedCornerShape,
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surface
         ),
@@ -112,8 +110,8 @@ fun BookItem(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(12.dp),
-            horizontalArrangement = Arrangement.spacedBy(16.dp)
+                .padding(Dimens.SmallPadding),
+            horizontalArrangement = Arrangement.spacedBy(Dimens.MediumPadding)
         ) {
             AsyncImage(
                 model = book.coverI
@@ -122,16 +120,18 @@ fun BookItem(
                 contentDescription = book.title,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .width(90.dp)
-                    .height(130.dp)
-                    .clip(RoundedCornerShape(8.dp)),
+                    .size(
+                        width = Dimens.BookCoverSize.first,
+                        height = Dimens.BookCoverSize.second
+                    )
+                    .clip(Shapes.ExtraSmallRoundedCornerShape),
 //                placeholder = painterResource(R.drawable.book_placeholder),
 //                error = painterResource(R.drawable.book_placeholder)
             )
 
             Column(
                 modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.spacedBy(8.dp)
+                verticalArrangement = Arrangement.spacedBy(Dimens.ExtraSmallPadding)
             ) {
                 Text(
                     text = book.title,

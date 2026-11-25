@@ -7,7 +7,7 @@ sealed class ScreenToolbar {
     data object Hidden : ScreenToolbar()
 
     data class Default(
-        val title: String,
+        val title: String = "Bookora",
         val action: Action? = null
     ) : ScreenToolbar()
 }
