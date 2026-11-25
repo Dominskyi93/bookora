@@ -15,6 +15,7 @@ ksp = "2.3.12"
 okhttp = "5.5.1"
 retrofit = "3.0.0"
 kotlinSerialization = "1.13.0"
+coil = "3.6.3"
 
 #navigation
 hiltNavigation = "1.4.0"
@@ -25,7 +26,6 @@ coroutines = "1.11.0"
 serialization = "2.4.21"
 timber = "5.0.1"
 collections-immutable = "0.5.2"
-
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -65,6 +65,8 @@ androidx-compose-material3-adaptive-navigation-suite = { group = "androidx.compo
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 javax-inject = { module = "javax.inject:javax.inject", version = "1" }
 collections-immutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "collections-immutable" }
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
+coil-network = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil" }
 
 #custom plugins
 plugin-android-application = { module = "com.android.application:com.android.application.gradle.plugin", version.ref = "agp" }

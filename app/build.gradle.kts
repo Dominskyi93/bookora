@@ -19,11 +19,12 @@ dependencies {
     implementation(projects.core.commonAndroid)
 //    implementation(projects.features.init.presentation)
     implementation(projects.navigation)
+    implementation(projects.glue)
 
-    implementation(projects.templates.androidLibrary)
-    implementation(projects.templates.kotlinLibrary)
-    implementation(projects.templates.feature.domain)
-    implementation(projects.templates.feature.presentation)
+//    implementation(projects.templates.androidLibrary)
+//    implementation(projects.templates.kotlinLibrary)
+//    implementation(projects.templates.feature.domain)
+//    implementation(projects.templates.feature.presentation)
     //hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)

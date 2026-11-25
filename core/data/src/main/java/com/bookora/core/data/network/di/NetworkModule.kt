@@ -20,6 +20,10 @@ internal object NetworkModule {
 
     @Provides
     @Singleton
+    fun providesNetworkConfig() = NetworkConfig()
+
+    @Provides
+    @Singleton
     fun provideRetrofit(
         networkConfig: NetworkConfig,
         okHttpClient: OkHttpClient,

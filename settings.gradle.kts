@@ -34,6 +34,8 @@ include(":core:data")
 include(":core:presentation")
 
 include(":navigation")
+include(":glue")
+include(":data")
 
 include(":features:main:domain")
 include(":features:main:presentation")

@@ -12,12 +12,16 @@ android {
 dependencies {
     api(projects.features.library.domain)
     implementation(projects.core.essentials)
+    implementation(projects.core.presentation)
 //    implementation(projects.core.presentation)
 //    implementation(projects.core.theme)
     implementation(projects.core.navigationDsl)
     //hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network)
 
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)
