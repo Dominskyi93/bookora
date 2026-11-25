@@ -31,6 +31,7 @@ include(":core:essentials")
 include(":core:common-android")
 include(":core:navigation-dsl")
 include(":core:data")
+include(":core:presentation")
 
 include(":navigation")
 

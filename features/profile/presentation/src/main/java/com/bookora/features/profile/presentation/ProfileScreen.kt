@@ -12,6 +12,8 @@ import com.bookora.navigation.dsl.ScreenScope
 
 
 fun ScreenScope.profileScreen() {
+    val viewModel: ProfileVM = viewModel(ProfileVM::class)
+
 
 //    toolbar = ScreenToolbar.Default(
 //        title = context.getString(R.string.chats_title),

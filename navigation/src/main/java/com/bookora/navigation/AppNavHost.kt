@@ -6,7 +6,7 @@ import androidx.compose.foundation.background
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.navigation3.rememberViewModelStoreNavEntryDecorator
 import androidx.navigation3.runtime.NavBackStack
@@ -26,10 +26,14 @@ fun AppNavHost(
     startDestination: Route = MainRoute,
     navGraphBuilder: ExtendedNavGraphBuilder.() -> Unit = {}
 ) {
-
     val backStack = rememberNavBackStack(startDestination)
             as NavBackStack<Route>
-    val router = remember { NavComponentAppRouter(backStack) }
+
+    val router = NavComponentAppRouter.get()
+
+    SideEffect {
+        router.setBackStack(backStack)
+    }
 
     Surface(
         Modifier.background(MaterialTheme.colorScheme.background)
@@ -42,12 +46,14 @@ fun AppNavHost(
                 rememberViewModelStoreNavEntryDecorator()
             ),
             entryProvider = entryProvider {
-                ExtendedNavGraphBuilderImpl(origin = this, router = router).apply {
+                ExtendedNavGraphBuilderImpl(
+                    origin = this,
+                    router = router
+                ).apply {
                     buildAppNavGraph()
                     navGraphBuilder()
                 }
                 dialogs.Renderer()
-
             }
         )
     }
